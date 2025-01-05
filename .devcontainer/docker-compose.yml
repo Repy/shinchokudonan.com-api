@@ -5,8 +5,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    network:
-      - backend
+    links:
+      - "db:database"
   db:
     image: mcr.microsoft.com/azure-sql-edge:latest
     hostname: azure-sql
@@ -14,14 +14,9 @@ services:
     restart: unless-stopped
     environment:
       ACCEPT_EULA: Y
-      MSSQL_SA_PASSWORD: pass
+      MSSQL_SA_PASSWORD: Pass@@@@
     deploy:
       resources:
         limits:
           cpus: '1'
           memory: 1024M
-    network:
-      - backend
-networks:
-  backend:
-    driver: bridge
