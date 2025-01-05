@@ -1,0 +1,9 @@
+{
+    "files.encoding": "utf8",
+    "files.eol": "\n",
+    "explorer.copyRelativePathSeparator": "/",
+    "editor.tabSize": 2,
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "editor.formatOnSave": true,
+    "files.autoSave": "off"
+}
